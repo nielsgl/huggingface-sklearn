@@ -1,0 +1,53 @@
+[tool.poetry]
+name = "huggingface-sklearn"
+version = "0.1.0"
+description = "Hugging Face Scikit Learn Demos"
+authors = ["Niels van Galen Last <nvangalenlast@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "huggingface_sklearn"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+numpy = "^1.24.2"
+scikit-learn = "^1.2.2"
+matplotlib = "^3.7.1"
+plotly = "^5.14.0"
+gradio = "^3.24.1"
+
+
+[tool.poetry.group.dev.dependencies]
+black = {extras = ["jupyter"], version = "^23.3.0"}
+isort = "^5.12.0"
+pre-commit = "^3.2.1"
+pylint = "^2.17.1"
+pytest = "^7.2.2"
+jupyterlab = "^3.6.3"
+jupyterlab-widgets = "^3.0.7"
+ipywidgets = "^8.0.6"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 100
+target_version = ['py311']
+include = '\.py$'
+
+[tool.isort]
+profile = "black"
+# force_single_line = "false"
+force_sort_within_sections="true"
+line_length = 100
+
+[tool.pylint]
+[tool.pylint.messages_control]
+#line-too-long='off'
+disable=""",
+    #line-too-long,
+    logging-fstring-interpolation,
+    missing-class-docstring,
+    missing-function-docstring,
+    missing-module-docstring,
+    """
