@@ -1,2 +1,3 @@
-# huggingface-sklearn
+# Hugging Face - Scikit Learn
+
 Scikit-Learn Demos for HuggingFace
